@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset=utf-8><title>MOSS-TTS Voice-Acting — DramaBox reinterpretation demos</title>
+<style>body{font-family:system-ui,Segoe UI,Arial;background:#0e1117;color:#e6edf3;margin:0;padding:36px;max-width:900px}
+a{color:#58a6ff;text-decoration:none}a:hover{text-decoration:underline}h1{font-weight:700}h2{color:#58a6ff;margin:22px 0 6px}
+.sub{color:#8b949e;font-size:14px;line-height:1.6}.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px;margin:12px 0}
+.card a{font-size:16px;font-weight:600}.card .d{color:#8b949e;font-size:13px;margin-top:4px;line-height:1.5}</style></head><body>
+<h1>MOSS-TTS Voice-Acting &mdash; DramaBox reinterpretation demos</h1>
+<p class=sub>Reference-guided reinterpretation of DramaBox clips on <code>moss-tts-local-transformer-4.55b-voice-acting-v2</code>: the original clip is fed back as a voice reference together with its own GENERAL/SCRIPT prompt, and the model regenerates the same line as a batched group of 8 candidates, reward-ranked by <b>emotional similarity &times; inverse&nbsp;WER</b>.</p>
+<div class=card><a href="dramabox_reinterpret.html">🎭 Reinterpretations &mdash; reference-guided best-of-8</a>
+<div class=d>All 133 clips, original + top-3 candidates, with a selection-strategy analysis (top2-of-4 vs top3-of-8). Reference and target say the same (correctly aligned) text.</div></div>
+<div class=card><a href="dramabox_reinterpret_merge.html">🎚️ Dynamic emotion+VoiceNet LoRA merge vs. baseline</a>
+<div class=d>The long clips reinterpreted two ways side by side: plain v2 baseline vs. v2 with a dynamic mix of emotion + VoiceNet LoRAs merged in RAM (strengths read off the input clip), best-of-8 each.</div></div>
+</body></html>
